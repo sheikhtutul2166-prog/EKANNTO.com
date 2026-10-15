@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6F4E37"><title>Seller Salary | EKANNTO Admin</title>
+<link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/ekannto-admin.css">
+<style>
+.ss-wrap{max-width:1200px;margin:0 auto;padding:18px;display:grid;gap:16px}.ss-muted{color:#766d65}.ss-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.ss-stat{border:1px solid #e8ded4;border-radius:16px;padding:16px;background:#fff}.ss-stat small{display:block;color:#766d65;margin-bottom:8px}.ss-stat strong{font-size:clamp(18px,3vw,26px);color:#4f3526;overflow-wrap:anywhere}.ss-search{width:100%;box-sizing:border-box;padding:13px;border:1px solid #dfd4ca;border-radius:12px;font:inherit}.ss-tablewrap{overflow:auto;width:100%}.ss-table{width:100%;border-collapse:collapse;min-width:900px}.ss-table th,.ss-table td{padding:12px;border-bottom:1px solid #eee4db;text-align:left;vertical-align:top}.ss-table th{background:#f5f0e9;color:#604630;position:sticky;top:0}.ss-money{font-weight:800;color:#4f3526}.ss-pill{display:inline-block;border-radius:999px;padding:5px 9px;background:#f5f0e9;color:#604630;font-size:12px}.ss-warn{padding:12px;border-radius:12px;background:#fff5df;color:#76521b}.ss-details{margin-top:12px}.ss-details summary{cursor:pointer;font-weight:700;padding:8px 0}.ss-subtable{width:100%;border-collapse:collapse}.ss-subtable td,.ss-subtable th{padding:8px;border-bottom:1px solid #eee;text-align:left}
+@media(max-width:760px){.ss-wrap{padding:12px}.ss-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.ss-stat{padding:12px}.ss-table{min-width:850px}}
+</style></head>
+<body>
+<main class="ea-admin-shell">
+<header class="ea-admin-head"><div><div class="ea-admin-brand">EKANNTO <span class="ea-admin-brand-sub">ADMIN CONTROL CENTER</span></div><small>Seller Salary · Pending payouts</small></div><div class="ea-admin-head-actions"><a class="ea-admin-btn" href="admintutul.html">Dashboard</a><button class="ea-admin-btn" id="refresh">Refresh</button><button class="ea-admin-btn primary" id="logout">Logout</button></div></header>
+<nav class="ea-admin-nav" aria-label="Admin navigation"><a href="admintutul.html">Dashboard</a><a href="admin-orders.html">Orders</a><a href="admin-escrow.html">Escrow & Disputes</a><a href="admin-seller-finance.html">Seller Finance</a><a href="admin-seller-salary.html" aria-current="page">Seller Salary</a></nav>
+<div class="ss-wrap">
+<section class="ea-admin-card"><h1>Seller Salary</h1><p class="ss-muted">প্রতি Seller-এর বিক্রয়, rejected, refund, return এবং এখনো পরিশোধ না করা সম্ভাব্য পাওনা। Reject/return/refund হওয়া পণ্যের মূল্য payable salary-তে যোগ করা হয় না। Escrow নিয়ম অনুযায়ী delivery/completion নিশ্চিত না হলে টাকা payout-ready ধরা হবে না।</p>
+<div id="summary" class="ss-stats"></div>
+<p class="ss-warn"><b>Prototype সতর্কতা:</b> এই পেজ বর্তমান browser-local data থেকে হিসাব করে। Admin ও Seller আলাদা ডিভাইসে নির্ভরযোগ্যভাবে sync, escrow release বা real payment নিশ্চিত করতে Worker API + D1 ledger প্রয়োজন।</p></section>
+<section class="ea-admin-card"><h2>Seller List & Pending Salary</h2><input id="search" class="ss-search" placeholder="Search seller name, shop, Seller ID, email or phone"><div class="ss-tablewrap"><table class="ss-table"><thead><tr><th>Seller / Shop</th><th>Seller ID</th><th>Email</th><th>Phone</th><th>Products sold</th><th>Rejected</th><th>Refunded</th><th>Returned</th><th>Pending Salary</th><th>Details</th></tr></thead><tbody id="rows"></tbody></table></div><p id="empty" class="ss-muted"></p></section>
+<section class="ea-admin-card"><h2>হিসাবের নিয়ম</h2><ul><li>Seller-এর নিজের পণ্যের order item-ই গণনা করা হবে।</li><li>Rejected product count product catalogue-এর rejected status থেকে গণনা হয়; rejected item-এর বিক্রয়মূল্য salary নয়।</li><li>Refunded/returned item salary থেকে বাদ থাকে।</li><li>Pending salary-তে শুধু delivered/completed order item, কমিশন বাদ দিয়ে, এবং আগে paid হিসেবে চিহ্নিত নয়—এমন item অন্তর্ভুক্ত হয়।</li><li>একই item-কে duplicate হিসেবে গণনা না করার জন্য order ID + item ID/name দিয়ে মিলানো হয়।</li></ul></section>
+</div></main>
+<script src="assets/js/admin-seller-salary.js"></script></body></html>

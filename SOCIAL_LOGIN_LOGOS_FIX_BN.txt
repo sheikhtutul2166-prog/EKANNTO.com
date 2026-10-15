@@ -1,0 +1,5 @@
+EKAANTO — Google ও Apple বোতামের লোগো
+
+- Login ও Create Account পেজের Google বোতামে Google-এর চার রঙের SVG লোগো যোগ করা হয়েছে।
+- Apple বোতামে Apple-এর নিজস্ব সিলুয়েট SVG লোগো যোগ করা হয়েছে। Apple-এর অফিসিয়াল ব্র্যান্ড মার্ক সাধারণত একরঙা; Google-এর মতো বহু রঙের Apple লোগো নয়।
+- বোতামের বিদ্যমান click handler অপরিবর্তিত; এটি Google/Apple OAuth চালু করে না, আগের মতো not-available পেজে যায়। বাস্তব OAuth-এর জন্য provider configuration ও backend setup প্রয়োজন।

@@ -1,0 +1,3 @@
+EKANNTO Search Camera Modal Fix
+
+The camera icon on Search now opens a compact modal with Take Photo and Choose from Gallery, matching the home-page photo picker. After selection, the photo is passed to the existing image-search page and automatically selected. Supported formats are JPG/PNG/WebP (8 MB maximum for reliable processing).

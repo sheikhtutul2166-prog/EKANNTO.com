@@ -1,0 +1,5 @@
+EKANNTO Seller ID Update
+
+Seller Dashboard এবং Seller Account/Profile-এ Seller ID স্পষ্টভাবে দেখানো হবে। Dashboard-এ Copy বাটনও আছে। নতুন seller ID তৈরির বর্তমান নিয়ম EK-SELL-01, EK-SELL-02, EK-SELL-03 ...
+
+ব্যবহার: ZIP Extract করে index.html চালান বা পুরো folder hosting-এ upload করুন। assets/ ফোল্ডারসহ সব ফাইল একই structure-এ রাখুন।

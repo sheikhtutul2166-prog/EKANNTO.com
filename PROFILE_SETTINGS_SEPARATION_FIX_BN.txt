@@ -1,0 +1,11 @@
+EKAANTO — Profile Settings ও Seller Account আলাদা করার ফিক্স
+
+কী পরিবর্তন:
+1. profile-settings.html থেকে seller-dashboard/account enhancement scripts বাদ দেওয়া হয়েছে।
+2. Monthly Seller Settlement card আর customer Profile Settings পেজে ঢুকবে না।
+3. Seller Dashboard-এর script ও seller-related page files অপরিবর্তিত রাখা হয়েছে।
+4. D1/R2 configuration, database migrations ও user/order data পরিবর্তন করা হয়নি।
+
+Deploy:
+Cloudflare Pages-এ এই ZIP-এর সম্পূর্ণ project files আপলোড/ডিপ্লয় করুন।
+Deploy-এর পরে iPhone Safari-তে পেজ reload করুন; দরকার হলে private tab-এ পরীক্ষা করুন।

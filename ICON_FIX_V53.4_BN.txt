@@ -1,0 +1,6 @@
+EKANNTO Icon Fix V53.4
+
+সমস্যা: iPhone Add to Home Screen icon-এ সাদা/স্বচ্ছ প্রান্ত দেখা যাচ্ছিল।
+সমাধান: App icon এবং Apple touch icon এখন সম্পূর্ণ opaque coffee-brown background (#6F4E37), সাদা centered logo mark, এবং updated cache version ব্যবহার করে।
+
+Deploy করার পর Safari থেকে পুরোনো Home Screen shortcut মুছে আবার Add to Home Screen করুন। প্রয়োজনে Safari page reload করুন।

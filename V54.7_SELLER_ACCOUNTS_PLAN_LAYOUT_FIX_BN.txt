@@ -1,0 +1,7 @@
+EKANNTO V54.7 — Seller account switching, local-preview 5-minute approval, premium-plan typography
+
+- Seller Access now lists all applications belonging to the signed-in user; approved accounts can be opened individually, and new shop applications remain available.
+- Local-preview pending seller applications auto-approve after 5 minutes unless an admin has rejected them first. This is browser Local Storage only and is NOT secure production identity verification.
+- Admin seller verification page continues to support manual Approve/Reject and rejection reasons.
+- Seller subscription hero layout overrides inherited global hero/grid CSS so Bengali title and description remain readable on mobile.
+- Camera fixes from V54.6 are retained.

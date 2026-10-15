@@ -1,0 +1,15 @@
+EKAANTO — Home ও সব পেজ Blank হওয়ার জরুরি ফিক্স
+
+সমস্যা:
+আগের ZIP-এ assets/js/app.js-এর pageRenderers object-এ ভুল comma ছিল। ফলে JavaScript parse error হয়ে app.js পুরোপুরি বন্ধ হয়ে গিয়েছিল, তাই Home, Shop, Profile-সহ সব পেজের content আর render হচ্ছিল না।
+
+সমাধান:
+- JavaScript route object-এর syntax ঠিক করা হয়েছে।
+- Profile Settings-এর ভুল Seller Account route যোগ করা হয়নি; customer Profile Settings assets/js/profile-v12.js দ্বারা render হবে।
+- Seller Dashboard ও seller-specific routes রাখা হয়েছে।
+- D1/R2, migrations, local data structure পরিবর্তন করা হয়নি।
+
+যাচাই:
+- Known syntax error আর নেই।
+- ZIP integrity test সফল।
+- Source-level JavaScript syntax check করা হয়েছে।

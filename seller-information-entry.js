@@ -1,0 +1,1 @@
+(()=>{'use strict';if(document.body.dataset.page!=='seller-dashboard')return;const app=document.getElementById('app');if(!app)return;const add=()=>{const old=document.getElementById('sellerInformationShortcut');if(old)old.remove()};add();new MutationObserver(add).observe(app,{childList:true,subtree:true});})();

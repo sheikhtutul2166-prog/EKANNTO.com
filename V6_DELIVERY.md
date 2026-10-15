@@ -1,0 +1,1 @@
+V6: Saved editable delivery addresses (Home/Office/Other), default address and checkout autofill, opt-in save at checkout, local order status history and progress, printable demo order summary. Browser-only. No GPS/courier API, no real-time cross-device synchronization, and no secure storage of personal information. Do not enter real personal details during development.

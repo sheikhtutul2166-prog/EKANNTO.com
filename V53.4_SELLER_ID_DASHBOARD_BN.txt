@@ -1,0 +1,1 @@
+EKANNTO update: Seller ID now appears directly with the shop/seller name in the seller dashboard identity card. IDs display as EK-SELL-01, EK-SELL-02, etc., unless a sellerCode already exists. The Copy button copies the displayed Seller ID.

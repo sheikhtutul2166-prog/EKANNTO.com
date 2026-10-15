@@ -1,0 +1,12 @@
+EKAANNTO — Seller Profile Separation & Onboarding Update
+
+এই ZIP-এর পরিবর্তন:
+1. Website Profile-এ Website Profile Settings এবং Website Account Profile আলাদা করে দেখানো হয়েছে।
+2. Seller Account-এর জন্য আলাদা Seller Account Profile, Seller Verification Information এবং Seller Account & Applications links যোগ করা হয়েছে।
+3. Seller Access page থেকে seller-onboarding.html?new=1 দিয়ে নতুন আবেদন, verification status, submitted information এবং seller account profile-এ যাওয়ার shortcut যোগ করা হয়েছে।
+4. Seller onboarding-এর পরিচিত ধাপগুলো এই ZIP-এ আগে থেকেই ছিল: business/account fields, NID front/back capture, OCR, live selfie, identity review, terms/agreement, verification status এবং approved/rejected flow. Admin review page-ও রয়েছে।
+
+গুরুত্বপূর্ণ সীমাবদ্ধতা:
+- NID OCR Tesseract.js external CDN ও network-এর ওপর নির্ভর করে; বাংলা/English OCR শতভাগ নির্ভুল বা ৫ সেকেন্ডে সম্পন্ন হওয়ার নিশ্চয়তা নেই। Submit করার আগে OCR দিয়ে পাওয়া নাম, জন্মতারিখ, NID number, বাবা-মায়ের নাম, blood group ও address হাতে মিলিয়ে নিতে হবে।
+- LocalStorage/local demo ভিত্তিক approval status একই browser/device-এ সীমাবদ্ধ হতে পারে। প্রকৃত production NID/selfie verification ও নিরাপদ cross-device admin approval-এর জন্য secure backend/private storage দরকার।
+- Admin approval/rejection এবং seller registration production-এ কাজ করছে কি না live deployment-এ পরীক্ষা করা হয়নি।

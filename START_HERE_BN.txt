@@ -1,0 +1,21 @@
+EKANNTO — HOME PAGE FIX
+
+এই ZIP-এ index.html এখন ZIP-এর root-এ রাখা হয়েছে, যাতে hosting/server-এ extract করলে homepage সরাসরি পাওয়া যায়।
+
+চালানোর নিয়ম:
+1. ZIP extract করুন।
+2. index.html ফাইলটি খুলুন।
+3. কিছু browser-এ local file mode-এ সব feature কাজ নাও করতে পারে; সেক্ষেত্রে folder-টি static hosting/server-এ upload করুন।
+4. assets/ folder-টি index.html-এর পাশে একই root-এ থাকতে হবে।
+
+নোট: এই build-এর data browser-এর local storage-এ রাখা হয়। Original app files ও feature scripts রাখা হয়েছে।
+
+
+SELLER SUBSCRIPTION PLANS:
+- seller-ai-plans.html খুলুন।
+- Basic, Pro, Business, Business World (BW) এবং Business World Unlimited (BWU) প্ল্যান দেখুন।
+- মূল্য পরিবর্তন/Export/Import করতে পেজের নিচের “প্ল্যান সেটিংস” ব্যবহার করুন।
+- সব সেটিংস এই ব্রাউজারের Local Storage-এ থাকে; এটি পেমেন্ট বা Premium Access সক্রিয় করে না। Live করার আগে server-side database, authentication, payment verification ও usage enforcement যুক্ত করতে হবে।
+
+
+Seller Plan Manager: admin-seller-plans.html (Admin demo login/session required). Seller account dashboard-এ Subscription Plans entry যুক্ত করা হয়েছে। ৩ দিনের Free Trial ও plan manager Local Preview-only; live payment এবং পুরো অ্যাপের feature enforcement backend-এ বাস্তবায়ন করতে হবে।

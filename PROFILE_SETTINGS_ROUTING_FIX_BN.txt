@@ -1,0 +1,18 @@
+EKAANTO — জরুরি Profile Settings Routing Fix
+
+সমস্যার আসল কারণ:
+assets/js/app.js-এ ভুলভাবে 'profile-settings' পেজকে sellerAccountProfile() ফাংশনের সঙ্গে যুক্ত করা ছিল।
+এই ফাংশন Seller Account Active পেজে পাঠাত।
+
+সমাধান:
+- ভুল profile-settings → sellerAccountProfile route সরানো হয়েছে।
+- Customer Profile Settings এখন assets/js/profile-v12.js-এর settings() renderer দিয়ে চলবে।
+- Profile Settings-এর ভেতরে Profile/Name/Email/Phone edit, Delivery Address, General Settings,
+  Notification Settings, Viewed, Clear Cache, এবং প্রজেক্টে থাকা অন্যান্য customer options থাকবে।
+- Seller Access/Dashboard-এর আলাদা routes অপরিবর্তিত আছে।
+- D1/R2/migrations/user/order data পরিবর্তন করা হয়নি।
+
+Local source check:
+- ভুল route আর নেই।
+- Seller Account renderer ও seller-dashboard routes অক্ষত।
+- ZIP integrity check করা হয়েছে।

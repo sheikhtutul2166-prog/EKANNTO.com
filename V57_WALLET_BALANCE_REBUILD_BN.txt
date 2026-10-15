@@ -1,0 +1,9 @@
+EKAANNTO V57 — WALLET BALANCE REBUILD
+
+পরিবর্তন:
+1. Seller Dashboard balance calculation এখন Seller Wallet & Payouts-এর paid earnings, manual adjustments এবং pending withdrawals-এর একই নিয়ম অনুসরণ করে।
+2. Explicit balance field শূন্য হলে সেটিকে ভুলভাবে final balance ধরে না নিয়ে paid earnings + adjustments থেকে fallback হিসাব করে।
+3. Admin Seller Available Balance পেজেও একই fallback priority।
+4. Future database integration-এর জন্য assets/js/wallet-storage-adapter.js ও WALLET_STORAGE_ADAPTER_NEXT_STEPS_BN.md যোগ করা হয়েছে।
+
+সতর্কতা: বর্তমান storage localStorage। লাইভ account-এর প্রকৃত data দিয়ে পরীক্ষা ছাড়া নির্দিষ্ট ৳8,000 balance নিশ্চিত বলা যায় না। Production withdrawal-এর জন্য server-side database transaction দরকার।
